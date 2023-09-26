@@ -1,5 +1,7 @@
 # This is a sample Python script.
 import os.path
+import random
+import string
 
 
 # Press Shift+F10 to execute it or replace it with your code.
@@ -20,7 +22,9 @@ def create_file(path, size):
     print('create file')
 
 def random_str(length):
-    return ''
+    return ''.join(
+        random.choice(string.ascii_letters) for i in range(length)
+    )
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
