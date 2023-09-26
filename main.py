@@ -9,7 +9,7 @@ def run():
     # put file in `repository` folder
     prefix = 'repository/'
     if not os.path.exists(prefix):
-        os.mkdir(prefix)
+        os.makedirs(prefix)
 
     # create folder
     folder_name = prefix
@@ -20,7 +20,8 @@ def run():
         d = d + 1
 
 def create_folder(path):
-    print('mkdir')
+    print('creating folder: ' + path)
+    os.makedirs(path)
 
 def create_file(path, size):
     print('create file')
