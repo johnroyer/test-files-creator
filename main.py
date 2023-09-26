@@ -5,11 +5,7 @@ import string
 
 def run():
     print('run')
-
-    # put file in `repository` folder
-    prefix = 'repository/'
-    if not os.path.exists(prefix):
-        os.makedirs(prefix)
+    init()
 
     # create folder
     folder_name = prefix
@@ -26,6 +22,12 @@ def run():
     file_size = random.randint(1024, max_file_size)
     with open(file_name, 'wb') as file:
         file.write(os.urandom(file_size))
+
+def init():
+    # put file in `repository` folder
+    prefix = 'repository/'
+    if not os.path.exists(prefix):
+        os.makedirs(prefix)
 
 def create_folder(path):
     print('creating folder: ' + path)
