@@ -18,6 +18,14 @@ def run():
     while d < depth:
         folder_name += random_str(random.randint(2,6)) + '/'
         d = d + 1
+    create_folder(folder_name)
+
+    # fill file in folder
+    file_name = folder_name + random_str(16)
+    max_file_size = 500 * 1024 * 1024 # 500MB
+    file_size = random.randint(1024, max_file_size)
+    with open(file_name, 'wb') as file:
+        file.write(os.urandom(file_size))
 
 def create_folder(path):
     print('creating folder: ' + path)
