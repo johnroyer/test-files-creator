@@ -13,7 +13,7 @@ def run():
     if not os.path.exists(prefix):
         os.mkdir(prefix)
 
-def create_folder():
+def create_folder(path):
     print('mkdir')
 
 def create_file(path, size):
