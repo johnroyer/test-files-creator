@@ -11,6 +11,14 @@ def run():
     if not os.path.exists(prefix):
         os.mkdir(prefix)
 
+    # create folder
+    folder_name = prefix
+    depth = random.randint(1,3)
+    d = 0
+    while d < depth:
+        folder_name += random_str(random.randint(2,6)) + '/'
+        d = d + 1
+
 def create_folder(path):
     print('mkdir')
 
