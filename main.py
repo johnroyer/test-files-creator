@@ -19,6 +19,9 @@ def create_folder():
 def create_file(path, size):
     print('create file')
 
+def random_str(length):
+    return ''
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print('creating files ...')
